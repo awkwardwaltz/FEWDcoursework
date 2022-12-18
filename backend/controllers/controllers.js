@@ -1,4 +1,4 @@
-const recipeDAO = require("../models/recipesModel");
+const recipeDAO = require("../models/recipesmodel");
 const recipe = new recipeDAO({ filename: "./data/recipes.db", autoload: true });
 
 exports.newList = function (req, res) {
