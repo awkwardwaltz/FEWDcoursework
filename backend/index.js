@@ -1,21 +1,26 @@
 const express = require("express");
+const router = express.Router();
 const path = require("path")
 const app = express();
 const cors = require('cors');
 const bodyParser  = require('body-parser');
 app.use(cors());
-
-app.use(express.static(path.join(__dirname, 'frontend/build')))
-
-
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: false }));
+app.use(express.static(path.join(__dirname, 'frontend/build')))
 
-app.get('*', (req,res) => {
+//router.get("/", controller.listRecipe);
+router.get("/recipes", controller.listRecipe);
+router.post("/update", controller.updateRating)
+router.get("/reset", controller.newList);
+
+
+
+router.get('*', (req,res) => {
   res.sendFile(path.join(__dirname+'/frontend/build/index.html'))
 })
 
-const router = require('./routes/routes');
+//const router = require('./routes/routes');
 //app.use('/', router);
        const portNumber = process.env.PORT || 5000;
 app.listen(portNumber, () => {
