@@ -26,8 +26,14 @@ function Banner() {
                     <div class="BannerNav">
                         <Navbar variant="dark">
                             <Nav variant="pills">
-                                <Nav.Link onClick={(e) => Search(e)}>Search</Nav.Link>
-                                <Nav.Link onClick={(e) => UserPage(e)}>My Stuff</Nav.Link>
+                                <Row>
+                                    <Col>
+                                        <div class="menuButton" onClick={(e) => Search(e)}>Search</div>
+                                    </Col>
+                                    <Col>
+                                        <div class="menuButton" onClick={(e) => UserPage(e)}>My Stuff</div>
+                                    </Col>
+                                </Row>
                             </Nav>
                         </Navbar>
                     </div>
