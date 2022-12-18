@@ -4,17 +4,18 @@ const path = require("path")
 const app = express();
 const cors = require('cors');
 const bodyParser  = require('body-parser');
+const controller = require('controllers/controllers')
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: false }));
 app.use(express.static(path.join(__dirname, 'frontend/build')))
 
-router.get("/", controller.listRecipe);
-router.get("/recipes", controller.listRecipe);
-router.post("/update", controller.updateRating)
-router.get("/reset", controller.newList);
+app.get("/", controller.listRecipe);
+app.get("/recipes", controller.listRecipe);
+app.post("/update", controller.updateRating)
+app.get("/reset", controller.newList);
 
-router.get('*', (req,res) => {
+app.get('*', (req,res) => {
   res.sendFile(path.join(__dirname+'/frontend/build/index.html'))
 })
 
