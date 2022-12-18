@@ -16,7 +16,7 @@ app.get('*', (req,res) => {
 })
 
 const router = require('./routes/routes');
-app.use('/', router);
+app.use('/reset', router);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server started on port 5000. Ctrl^c to quit.");

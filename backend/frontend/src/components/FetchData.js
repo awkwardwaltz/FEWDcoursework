@@ -33,7 +33,7 @@ const FetchData = () => {
     }]);
 
     const fetchData = useCallback(() => {
-        const url = "/"
+        const url = "/recipe"
         fetch(url)
             .then((response) => response.json())
             .then((incomingData) => {
