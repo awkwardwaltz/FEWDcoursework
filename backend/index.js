@@ -16,7 +16,7 @@ app.get('*', (req,res) => {
 })
 
 const router = require('./routes/routes');
-app.use('/', router);
+//app.use('/', router);
        const portNumber = process.env.PORT || 5000;
 app.listen(portNumber, () => {
   console.log(`Server started on port ${portNumber}. Ctrl^c to quit.`);
