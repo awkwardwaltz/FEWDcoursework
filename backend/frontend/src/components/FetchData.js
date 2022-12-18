@@ -33,7 +33,7 @@ const FetchData = () => {
     }]);
 
     const fetchData = useCallback(() => {
-        const url = "/recipe"
+        const url = "https://fewdcourseworkone.herokuapp.com/recipe"
         fetch(url)
             .then((response) => response.json())
             .then((incomingData) => {
