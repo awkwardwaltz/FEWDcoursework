@@ -23,7 +23,7 @@ export default function Rating({recipe, rating, ratings}) {
 
         let newRating = [totalRating, recipe, ratings];
         const ratingString = JSON.stringify(newRating);
-        fetch(`http://localhost:3001/update`, {
+        fetch(`/update`, {
             method: "POST",
             headers: {
                 Accept: "application/json, text/plain, */* ",
