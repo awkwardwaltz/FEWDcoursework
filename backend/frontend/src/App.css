@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Banner {
+  background-color: #4effcd;
+  color: white;
+
+}
+
+.Menu {
+  background-color: #4effcd88;
+  text-align: center;
+}
+
+.BannerNav {
+  margin-left: auto;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Ingredient {
+  max-width: 150px;
+  background-color: coral;
+  color: white;
+  font-size: medium;
+  font-weight:bold;
+}
+
+.MenuContainer{
+  padding-right: 150px;
+}
+.menuButton {
+  text-align: center;
+  background-color: coral;
+  color: white;
+  max-width: 100px;
+  min-width: 70px;
+  font-weight: 700;
+}
+.shoppingListButton {
+  text-align: center;
+  background-color: coral;
+  color: white;
+  max-width: 128px;
+  min-width: 128px;
+  font-weight: 700;
+}
+
+.Rating {
+  background-color: coral;
+  color: white;
+}
+.RatingBar {
+  min-width: 100px;
+}
+
+.RecipeName {
+  color: rgb(67, 77, 210);
+}
+.RecipeName:hover {
+  color: rgb(27, 31, 83);
+}
+
+.RecipeHeader {
+  text-align: center;
+  background-color: coral;
+  color: white;
+  padding: 7px;
+
+}
+
+.ratingCol {
+  min-width: 100px;
+}
+
+.quantity {
+  text-align: center;
+}
+
+.sideBar {
+  background-color: cornflowerblue;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

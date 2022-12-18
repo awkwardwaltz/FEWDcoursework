@@ -4,13 +4,19 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, 'frontend/build')))
+
 const bodyParser  = require('body-parser');
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: false }));
 
+app.get('*', (req,res) => {
+  res.sendFile(path.join(__dirname+'/frontend/build/index.html'))
+})
+
 const router = require('./routes/routes');
 app.use('/', router);
 
-app.listen(3001, () => {
-  console.log("Server started on port 3001. Ctrl^c to quit.");
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Server started on port500. Ctrl^c to quit.");
 });
