@@ -31,7 +31,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://fewdcourseworkone.herokuapp.com/",
+  "proxy": "https://fewdcourseworkone.herokuapp.com",
   "browserslist": {
     "production": [
       ">0.2%",
