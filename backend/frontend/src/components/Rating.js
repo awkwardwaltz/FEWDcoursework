@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Heart from "./Heart";
 export default function Rating({recipe, rating, ratings}) {
-    const id = recipe.recipe
+    //creates an array from 1 to 5 that can be mapped
     const totalHearts = [1, 2, 3, 4, 5];
+    //creates state for the user's rating
     const [userRating, setUserRating] = useState()
+    //on change of the state updates number of ratings, 
     useEffect(() => {
         console.log(recipe)
         if(userRating){
         ratings ++
         }
         console.log(ratings)
-        let totalRating = (((parseInt(rating)) + userRating)/2)
+        let totalRating = (((parseInt(rating)) + userRating)/ratings).toFixed(2)
         console.log(totalRating)
         if(totalRating){
         updateRating(totalRating)

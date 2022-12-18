@@ -4,7 +4,6 @@ const Nutrition = ({ item }) => {
         <div>
 
             <ul style={{ listStyle: "outside" }}>
-                <li>Food : {item.name}</li>
                 <li>Serving size:{item.serving_size_g} g</li>
                 <li>Calories per serving :{item.calories}</li>
                 <li>Sugar content per serving{item.sugar_g} g</li>

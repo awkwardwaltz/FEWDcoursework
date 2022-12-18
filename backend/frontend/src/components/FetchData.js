@@ -11,15 +11,19 @@ import MenuContext from './context/MenuContext'
 import ShoppingListContext from './context/ShoppingListContext'
 
 const FetchData = () => {
+    //declares the state that will be used in the cupboard context
     const [ingFilter, setIngFilter] = useState([])
+    //declares the state that will be used in the menu feature
     const [menu, setMenu] = useState();
+    //declares the state that will be used in the shopping list feature
     const [shoppingList, setShoppingList] = useState();
+    //on first run sets both states to empty arrays to avoid an undefined error
     if (!menu && !shoppingList) {
         setMenu([])
         setShoppingList([])
     }
 
-
+    //inherits the page context so that the navigation can be used
     const [page, setPage] = useContext(PageContext);
 
     const [Recipes, setRecipes] = useState([{
@@ -47,9 +51,9 @@ const FetchData = () => {
 
         fetchData()
     }, [fetchData])
-
+    //declares an array of recipe names
     let rName = (Recipes.reduce((c, v) => c.concat(v), []).map(o => o.name))
-    console.log(rName)
+    //if the page context = search it loads the search component
     if (page == "Search") {
         return (
             <div>
@@ -60,7 +64,9 @@ const FetchData = () => {
             </div>
 
         )
-    } else if (rName.includes(page)) {
+    } 
+    // if the page name is a recipe in the recipe array it loads the page for that recipe
+    else if (rName.includes(page)) {
         return (
             <>
                 <Container>
@@ -83,7 +89,9 @@ const FetchData = () => {
                 </Container>
             </>
         )
-    } else if (page == "User") {
+    } 
+    //if the page context is user it loads the user page
+    else if (page == "User") {
         return (
             <>
                 <Container>
