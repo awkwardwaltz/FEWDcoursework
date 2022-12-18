@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({extended: false }));
 
 app.get('*', (req,res) => {
-  res.sendFile(path.join(__dirname+'/frontend/build/index.html'))
+  res.sendFile(path.join(__dirname+'/frontend/'))
 })
 
 const router = require('./routes/routes');

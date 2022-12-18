@@ -4,7 +4,7 @@ import PageContext from './context/PageContext'
 import MenuContext from './context/MenuContext'
 import ShoppingListContext from "./context/ShoppingListContext";
 import FetchNutrition from './FetchNutrition'
-import Card from "react-bootstrap/card"
+import Card from "react-bootstrap/Card"
 import Container from 'react-bootstrap/Container';
 import Col from "react-bootstrap/Col"
 import Row from 'react-bootstrap/Row';
